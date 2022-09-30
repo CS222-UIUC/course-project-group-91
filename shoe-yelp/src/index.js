@@ -7,11 +7,15 @@ class App extends Component {
     return (
       <div className="App">
         <div class = "header">
-          <div class = "logo">
-              <a id = "home" href = "index.html">
-                  <img id= "logo_img" src='shoelogo.png'></img>
-              </a>
+          <div class= "logoRow">
+            <div class = "logo">
+                <a id = "home" href = "index.html">
+                    <img id= "logo_img" src='shoelogo.png'></img>
+                </a>
+            </div>
           </div>
+          <a href = "login.html"> LOGIN </a>
+            <a href = "login.html"> SIGN UP </a>
           <div class = "search"><input></input></div>
           <div class = "menu">
             <hr></hr>
