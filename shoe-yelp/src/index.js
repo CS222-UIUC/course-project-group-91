@@ -12,6 +12,7 @@ class App extends Component {
                   <img id= "logo_img" src='shoelogo.png'></img>
               </a>
           </div>
+          <div class = "search"><input></input></div>
           <div class = "menu">
             <hr></hr>
               <ul>
