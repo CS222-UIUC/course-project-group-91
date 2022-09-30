@@ -18,7 +18,6 @@ jobs:
     # installing Node
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
-      uses: actions/checkout@v2
 
       with:
         # this will use the latest Node 12 version
