@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 let HomePage = (currPage, setCurrPage) => {
     
     
-    console.log(window.location.href);
     return (
         <div className="App">
         <div className = "header">
@@ -13,8 +12,8 @@ let HomePage = (currPage, setCurrPage) => {
                 </a>
             </div>
           </div>
-          <a href = "login.html"> LOGIN </a>
-            <a href = "login.html"> SIGN UP </a>
+          {/* <a href = "login.html"> LOGIN </a>
+            <a href = "login.html"> SIGN UP </a> */}
           <div className = "search"><input></input></div>
           <div className = "menu">
             <hr></hr>

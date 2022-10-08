@@ -9,7 +9,7 @@ import Contact from './pages/contact/contact';
 import Forum from './pages/forum/forum';
 import Login from './pages/login/loginPage';
 import Trending from './pages/trending/trending';
-  
+import SignUp from './pages/signup/signUpPage'
 function App() {
 return (
     <Router>
@@ -20,6 +20,7 @@ return (
         <Route path='/contact' element={<Contact/>} />
         <Route path='/forum' element={<Forum/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<SignUp/>} />
         <Route path='/trending' element={<Trending/>} />
     </Routes>
     </Router>
