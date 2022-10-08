@@ -1,10 +1,16 @@
 import React from "react";
-import { Nav, NavLink, NavMenu } 
+import logo from "./shoelogo.png";
+import { Nav, NavLink, NavMenu} 
     from "./NavbarElements";
   
 const Navbar = () => {
   return (
-      <Nav>
+    <>
+    <a id = "home" href = "index.html">
+    </a>
+    <img src = {logo} alt = "shoe logo"/>
+    <hr></hr>
+    <Nav>
         <NavMenu>
           <NavLink to="/about" activeStyle>
             ABOUT
@@ -19,7 +25,10 @@ const Navbar = () => {
             CONTACT
           </NavLink>
         </NavMenu>
+      
       </Nav>
+      <hr></hr>
+      </>
   );
 };
   
