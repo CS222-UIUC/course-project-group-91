@@ -4,7 +4,7 @@ const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryW
 const client = new MongoClient(uri);
 const app = express()
 
-//main : currently isn't called anywhere, will be useful later
+//main : currently isn't called anywhere, just for testing
 async function main() {
     try {
         await client.connect();
@@ -32,7 +32,7 @@ async function listDatabases(client) {
 //createListing : currently, our database has nothing but sample info, one collection being
 //sample AirBnB listings. This function creates an additional listing and inputs it into the collection.
 //In the future, this can be used for adding users, shoes, reviews, etc.
-async function createListing(client, newListing) {
+module.exports = async function createListing(client, newListing) {
     const result = await client.db("sample_airbnb").collection("listingsAndReviews").insertOne(newListing);
 
     console.log(`New listing created with the following id: ${result.insertedId}`);

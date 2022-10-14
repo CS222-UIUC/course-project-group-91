@@ -1,7 +1,11 @@
 //routing for everything user related
 
+const {MongoClient, ReturnDocument, MongoDBNamespace} = require('mongodb');
+const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
 const express = require('express');
 const router = express.Router();
+var newList = require('../server.js');
 
 //responds to get and post requests for the /users page
 router
@@ -11,9 +15,17 @@ router
         res.send("User List");
     })
     .post((req, res) => {
-        const isValid = false;
+        const isValid = true;
         if (isValid) {
             users.push({ firstName: req.body.firstName })
+            //test call to createListing function in server.js
+            //when a user inputs their info into the form at /users/new, it creates a new document in MongoDB
+            newList(client, {
+                name: req.body.firstName,
+                summary: "A placeholder value to show that this works",
+                bedrooms: 5,
+                bathrooms: 5
+            });
             res.redirect(`/users/${users.length - 1}`)
         } else {
             console.log("Error");   
