@@ -1,8 +1,17 @@
 import React from 'react';
-  
+import "./trending.css"
 const Trending = () => {
   return (
-    <h1>FIND THE LATEST SHOE TRENDS</h1>
+    <>
+      <div className="body">
+          <div className="trending">
+            <h1>
+              TRENDING
+            </h1>
+            {/* include cards */}
+          </div>
+      </div>
+    </>
   );
 };
   

@@ -1,18 +1,21 @@
 import React from "react";
-
+import "./about.css"
 const About = () => {
   return (
     <>
-    <div>
-      <h1>
-        {/* include a banner at the top */}
-        [INSERT BANNER]
-      </h1>
-      {/* insert paragraphs stating the product mission */}
-
-    </div>
-    <div>
-
+    <div className="body">
+      <div className="banner">
+        <h1>
+          {/* include a banner at the top */}
+          [INSERT BANNER]
+        </h1>
+      </div>
+      <div className="about">
+        <h1>
+          {/* include a banner at the top */}
+          [INSERT DESCRIPTION]
+        </h1>
+      </div>
     </div>
     </>
   );
