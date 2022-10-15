@@ -1,9 +1,9 @@
 import React from 'react';
   
-const Blogs = () => {
+const Trending = () => {
   return (
-    <h1>You can write your blogs!</h1>
+    <h1>FIND THE LATEST SHOE TRENDS</h1>
   );
 };
   
-export default Blogs;
+export default Trending;

@@ -1,0 +1,11 @@
+#logo {
+    height: 50px;
+    width: 170px;
+    margin: 20px;
+}
+#header {
+    display: inline-block;
+}
+#profile {
+    float:right;
+}
