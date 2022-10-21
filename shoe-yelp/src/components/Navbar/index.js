@@ -9,17 +9,19 @@ const Navbar = () => {
   return (
     <>
     <div id = "header">
-      <a id = "home" href = "index.html">
-        <img src = {logo} alt = "shoe logo" id = "logo"/>
-      </a>
-      <TextField id="outlined-basic" label="Search" variant="outlined" />
-      <div id = "profile">
-        <Button variant="contained">Log In</Button>
-        <Button variant="outlined">Sign Up</Button>
+      <div id = "search">
+        <TextField id="outlined-basic" label="Search" variant="outlined" sx={{ width: '35ch'}}/>
+        </div>
+        <div id = "profile">
+          <Button variant="contained"> Log In </Button>
+          <Button variant="outlined"> Sign Up </Button>
+        </div>
+        <NavLink to="/home">
+          <img src = {logo} alt = "shoe logo" id = "logo"/>
+        </NavLink>
       </div>
-    </div>
-    <hr></hr>
-    <Nav className = "justify-content-center">
+      <hr></hr>
+      <Nav className = "justify-content-center">
         <NavMenu>
           <NavLink to="/about" activeStyle>
             ABOUT
@@ -36,7 +38,7 @@ const Navbar = () => {
         </NavMenu>
       </Nav>
       <hr></hr>
-      </>
+    </>
   );
 };
   
