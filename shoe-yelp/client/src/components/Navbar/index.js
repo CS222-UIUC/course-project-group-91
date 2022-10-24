@@ -14,8 +14,8 @@ const Navbar = () => {
       </a>
       <TextField id="outlined-basic" label="Search" variant="outlined" />
       <div id = "profile">
-        <a id = "login" href = "/login"> <Button variant="contained" >Log In</Button> </a>
-        <a id = "signup" href = "/signup">  <Button variant="outlined">Sign Up</Button> </a>
+        <Button variant="contained" href = "/login" >Log In</Button>
+        <Button variant="outlined" href = "/signup">Sign Up</Button>
       </div>
     </div>
     <hr></hr>
