@@ -24,7 +24,7 @@
   font-family: 'Antic Slab', serif;
   text-transform: lowercase;
 }
-.link:hover {
+a:hover {
   text-decoration: none;
 }
 #home:hover {
