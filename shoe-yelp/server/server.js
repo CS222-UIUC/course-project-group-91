@@ -1,9 +1,10 @@
 const {MongoClient, ReturnDocument, MongoDBNamespace} = require('mongodb');
-const http = require('http');
+const express = require("express")
 const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
+const app = express()
 
-//main : currently isn't called anywhere, will be useful later
+//main : currently isn't called anywhere, just for testing
 async function main() {
     try {
         await client.connect();
@@ -31,7 +32,7 @@ async function listDatabases(client) {
 //createListing : currently, our database has nothing but sample info, one collection being
 //sample AirBnB listings. This function creates an additional listing and inputs it into the collection.
 //In the future, this can be used for adding users, shoes, reviews, etc.
-async function createListing(client, newListing) {
+module.exports = async function createListing(client, newListing) {
     const result = await client.db("sample_airbnb").collection("listingsAndReviews").insertOne(newListing);
 
     console.log(`New listing created with the following id: ${result.insertedId}`);
@@ -45,18 +46,21 @@ async function createMultipleListings(client, newListings) {
     console.log(result.insertedIds);
 }
 
-//server creation : currently displays the names of all database collections on the main page
-//messy and not how actual data will be communicated to the server, just a proof of concept
-const server = http.createServer(async (req, res) => {
-    await client.connect();
-    databasesList = await client.db().admin().listDatabases();
-    if (req.url == '/') {
-        databasesList.databases.forEach(db => res.write(` - ${db.name}`));
-        res.end();
-    }
-});
+//express code from here onwards, everything above will likely be removed at a later date
 
+//display the static "welcome" text
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true })); //used so we can access the bodies of files like new.js or index.html
 
-server.listen(3000);
-console.log('Listening on port 3000...')
-main().catch(console.error);
+app.set('view engine', 'ejs');
+
+const userRouter = require('./routes/users');
+
+app.use('/users', userRouter);
+
+function logger(req, res, next) {
+    console.log(req.originalUrl);
+    next()
+}
+
+app.listen(3000);
