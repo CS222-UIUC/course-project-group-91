@@ -13,10 +13,14 @@ const Navbar = () => {
         <TextField id="outlined-basic" label="Search" variant="outlined" sx={{ width: '35ch'}}/>
         </div>
         <div id = "profile">
-          <Button variant="contained"> Log In </Button>
-          <Button variant="outlined"> Sign Up </Button>
+          <NavLink to="/login" activeStyle>
+            <Button variant="contained"> Log In </Button>
+          </NavLink>
+          <NavLink to="/signup" activeStyle>
+            <Button variant="outlined"> Sign Up </Button>
+          </NavLink>
         </div>
-        <NavLink to="/home">
+        <NavLink to="/home" activeStyle>
           <img src = {logo} alt = "shoe logo" id = "logo"/>
         </NavLink>
       </div>
