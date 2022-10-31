@@ -1,6 +1,12 @@
 .body {
-    text-align: center;
+    align-items: center;
 }
-.about {
-    margin: 50px;
+.home {
+    margin: 70px;
 }
+#banner{
+    height: auto;
+    width: 100%;
+    background-size:contain;
+}
+
