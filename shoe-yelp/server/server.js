@@ -3,6 +3,7 @@ const express = require("express")
 const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 const app = express()
+//const test = require("../client/src/App.js");
 
 //main : currently isn't called anywhere, just for testing
 async function main() {
@@ -63,4 +64,4 @@ function logger(req, res, next) {
     next()
 }
 
-app.listen(3000);
+app.listen(5000);
