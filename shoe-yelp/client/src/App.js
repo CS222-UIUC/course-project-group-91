@@ -27,3 +27,5 @@ return (
     </Router>
 );
 }
+  
+export default App;
