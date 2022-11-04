@@ -39,5 +39,5 @@ p {
 #profile {
     float:right;
     margin: 20px;
-    display: inline;
+    display: inline-block;
 }
