@@ -1,34 +1,39 @@
 import React, { useState } from 'react'
 import "./login.css"
 import TextField from "@material-ui/core/TextField"
+import Button from '@mui/material/Button'
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     return(
-        <div className="mainContainer">
-            <div className="mainContainer">
+        <div className="body">
+            <div className="title">
                 <h1> LOG IN </h1>
             </div>
-            <div className="mainContainer">
-                <div>
+            <div className="loginForm">
+                <div className="username">
                     <TextField 
                     value={username}
-                    label="Enter your Username"
+                    label="Username"
                     onChange={(e) => {
                         setUsername(e.target.value);
                     }}/>
                 </div>
-                <div>
+                <div className="password">
                     <TextField 
                     value={password}
-                    label="Enter your password"
+                    label="Password"
                     onChange={(e) => {
                         setPassword(e.target.value);
                     }}/>
                 </div>
-                <a href = "/"><button className="loginButton"> LOG IN </button></a>
-                <a href="/signup"> <h6> Create Account </h6> </a>
+                <div className = "loginButton" >
+                    <Button variant="contained" type = "submit" > Log In</Button>
+                </div>
+                <div className = "accButton">
+                    <Button variant="outlined" href = "/signup" >Create Account</Button>
+                </div>
             </div>
         </div>
     );

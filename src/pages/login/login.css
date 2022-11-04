@@ -1,13 +1,15 @@
-.mainContainer{
-    justify-content: center;
-    align-items: center;
-  }
-  .loginButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-width: 3px;
-    background-color: white;
-    border-color: black;
-    font-weight: 400px;
-    font-size: 20px;
-  }
+.body {
+  text-align: center;
+}
+.username {
+  margin: 30px;
+}
+.password {
+  margin: 30px;
+}
+.signupButton {
+  margin: 10px;
+}
+.accButton {
+  margin: 10px;
+}
