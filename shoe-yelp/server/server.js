@@ -3,6 +3,7 @@ const express = require("express")
 const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 const app = express()
+var cors = require("cors");
 
 //main : currently isn't called anywhere, just for testing
 async function main() {
@@ -48,7 +49,13 @@ async function createMultipleListings(client, newListings) {
 
 //express code from here onwards, everything above will likely be removed at a later date
 
+
+
+
+
+
 //display the static "welcome" text
+app.use(cors);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //used so we can access the bodies of files like new.js or index.html
 
@@ -63,4 +70,4 @@ function logger(req, res, next) {
     next()
 }
 
-app.listen(3000);
+app.listen(9000);
