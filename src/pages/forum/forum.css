@@ -5,3 +5,8 @@
   margin: 50px;
   text-align: center;
 }
+.card {
+  float: auto;
+  padding: 20px;
+  display: inline-block;
+}

@@ -10,6 +10,7 @@ import Forum from './pages/forum/forum';
 import Login from './pages/login/login';
 import Trending from './pages/trending/trending';
 import Signup from './pages/signup/signup';
+import Post from './pages/postTemplate/post';
   
 function App() {
 return (
@@ -23,6 +24,7 @@ return (
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/trending' element={<Trending/>} />
+        <Route path='/post' element={<Post/>} />
     </Routes>
     </Router>
 );

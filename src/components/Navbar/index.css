@@ -33,11 +33,17 @@ p {
     margin: 20px;
 }
 #search{
-    float:right;
+    float: right;
     margin: 20px;
 }
-#profile {
-    float:right;
+.profile {
+    padding-top: 10px;
+    float: right;
     margin: 20px;
-    display: inline-block;
+}
+.login {
+  display: inline-block;
+}
+.signup {
+  display: inline-block;
 }
