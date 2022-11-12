@@ -6,17 +6,17 @@ const db = require('./db.js')
  */
 async function run() {
     try {
-    const success = await login('jboat', 'password1', user_profile_collection);
+    const success = await login('jboat', 'password1');
     if(success){
         console.log("success");
     }
     console.log(success);
 
-    const incorrect = await login('jboat', 'not right', user_profile_collection);
+    const incorrect = await login('jboat', 'not right');
     console.log(incorrect);
     
 
-    const invalid =  await login('invalid', 'not right', user_profile_collection);
+    const invalid =  await login('invalid', 'not right');
     console.log(invalid);
 
     const pass = await db.getPassword('jboat', user_profile_collection);

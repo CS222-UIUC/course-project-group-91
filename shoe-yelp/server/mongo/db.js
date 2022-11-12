@@ -132,12 +132,12 @@ async function getProfilePicture(user, collection) {
 
 //run().catch(console.dir);
 
-async function login(user, pass, collection) {
+async function login(user, pass) {
   try {
     const query = {username:user};
 
     //Retrieves user data for a given query
-    const doc = await collection.findOne(query);
+    const doc = await user_data.findOne(query);
     
     if (doc == null){
       return false;
