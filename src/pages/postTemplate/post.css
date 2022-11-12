@@ -1,0 +1,16 @@
+.body {
+    text-align: center;
+}
+.post {
+    margin: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.postImage {
+    float: right;
+    margin: 20px;
+}
+#postImg {
+    height: 30%;
+    width: 40%;
+}
