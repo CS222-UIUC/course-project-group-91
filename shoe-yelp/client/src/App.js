@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
@@ -7,42 +7,27 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Forum from './pages/forum/forum';
-import Login from './pages/login/loginPage';
-import SignUp from './pages/signup/signUpPage';
-import Trending from './pages/trending/trending';  
-
-class App extends Component {
-    //initializes the default state
-    constructor(props) {
-        super(props);
-        this.state = { apiResponse: "" };
-    }
-    //callAPI() fetches the data from the server and stores the response on this.state.apiResponse
-    callAPI() {
-        fetch("http://localhost:9000/")
-            .then(res => res.text())
-            .then(res => this.setState({ apiResponse: res }));
-    }
-    //executes callAPI() after the component mounts
-    componentWillMount() {
-        this.callAPI();
-    }
-    render() {
-        return (
-                <Router>
-                <Navbar />
-                <Routes>
-                    <Route exact path='/' element={<Home />} />
-                    <Route path='/about' element={<About/>} />
-                    <Route path='/contact' element={<Contact/>} />
-                    <Route path='/forum' element={<Forum/>} />
-                    <Route path='/login' element={<Login/>} />
-                    <Route path='/signup' element={<SignUp/>} />
-                    <Route path='/trending' element={<Trending/>} />
-                </Routes>
-                </Router>
-            );
-    }
+import Login from './pages/login/login';
+import Trending from './pages/trending/trending';
+import Signup from './pages/signup/signup';
+import Post from './pages/postTemplate/post';
+  
+function App() {
+return (
+    <Router>
+    <Navbar/>
+    <Routes>
+        <Route exact path='/home' element={<Home />} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/forum' element={<Forum/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<Signup/>} />
+        <Route path='/trending' element={<Trending/>} />
+        <Route path='/post' element={<Post/>} />
+    </Routes>
+    </Router>
+);
 }
-
+  
 export default App;

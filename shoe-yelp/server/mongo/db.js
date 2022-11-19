@@ -129,4 +129,9 @@ async function getProfilePicture(user, collection) {
 
 run().catch(console.dir);
 
-
+module.exports.getObjectID = getObjectID;
+module.exports.isValidUsername = isValidUsername;
+module.exports.getName = getName;
+module.exports.getFavoriteStyle = getFavoriteStyle;
+module.exports.getPassword = getPassword;
+module.exports.getProfilePicture = getProfilePicture;
