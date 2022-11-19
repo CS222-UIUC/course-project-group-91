@@ -15,13 +15,38 @@ const Post = () => {
           </section>
         </div>
           <div className="post">
-            <h3>
-              {"post name"}
-            </h3>
             {/* post information sourced from database */}
+            <div className='general'>
+              <div className = 'details'>
+              <h3>
+                {"Air Force 1"}
+              </h3>
+              <br></br>
+              <h4>
+                {"Nike"}
+              </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                  culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div className='postImage'>
+                  <img src = {img} id = "postImg"/>
+              </div>
+            </div>
             {/* post comment section */}
-            <div className='postImage'>
-                <img src = {img} id = "postImg"/>
+            <div className='commentList'>
+              <div className='commentSection'>
+                <div className='commentTitle'> 
+                  <h3>
+                    {"Comments"}
+                  </h3>
+                </div>
+                <div className='commentCard'></div>
+              </div>
             </div>
           </div>
       </div>

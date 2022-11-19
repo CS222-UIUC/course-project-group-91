@@ -8,7 +8,7 @@ h1{
 }
 
 h3 {
-    font-family: 'Lato';
+  font-family: 'Lato';
 }
 
 p {
@@ -19,7 +19,7 @@ p {
 
 .header {
   width: 100%;
-  padding:60px 0 20px;
+  padding:40px 0 20px; /*top,right,bottom, left*/
   text-align: center;
   background: #616161;
   color: white;
