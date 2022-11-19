@@ -8,9 +8,21 @@
 }
 .postImage {
     float: right;
-    margin: 20px;
 }
 #postImg {
     height: 30%;
-    width: 40%;
+    width: 400px;
+}
+.details {
+    margin-top: 100px;
+    margin-right: 200px;
+    display: inline-block;
+    height: 600px;
+    width: 800px;
+}
+.general {
+    display: inline-block;
+}
+.commentTitle {
+    float: left;
 }
