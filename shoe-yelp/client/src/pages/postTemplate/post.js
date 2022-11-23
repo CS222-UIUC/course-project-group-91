@@ -3,9 +3,9 @@ import "./post.css"
 import img from "./airforce1.png"
 import Button from '@mui/material/Button';
 
-
 // card element sourced from MaterialUI docs
-const Post = () => {
+const Post = (props) => {
+  console.log(props.name)
   return (
     <>
       <div className="body">
@@ -19,22 +19,16 @@ const Post = () => {
             <div className='general'>
               <div className = 'details'>
               <h3>
-                {"Air Force 1"}
+                {props.name}
               </h3>
               <br></br>
               <h4>
-                {"Nike"}
+                {props.brand}
               </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                  culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>{props.description}</p>
               </div>
               <div className='postImage'>
-                  <img src = {img} id = "postImg"/>
+                  <img src = {props.src} id = "postImg"/>
               </div>
             </div>
             {/* post comment section */}
@@ -43,6 +37,7 @@ const Post = () => {
                 <div className='commentTitle'> 
                   <h3>
                     {"Comments"}
+                    
                   </h3>
                 </div>
                 <div className='commentCard'></div>
