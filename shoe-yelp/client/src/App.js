@@ -7,10 +7,13 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Forum from './pages/forum/forum';
+import Post from './pages/forum/post';
+import NewPost from './pages/forum/newPost'
 import Login from './pages/login/loginPage';
 import SignUp from './pages/signup/signUpPage';
 import Trending from './pages/trending/trending';
-  
+
+
 function App() {
 return (
     <Router>
@@ -20,9 +23,12 @@ return (
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/forum' element={<Forum/>} />
+        <Route path='/forum/post' element={<Post/>} />
+        <Route path='/forum/new' element={<NewPost/>}/>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<SignUp/>} />
         <Route path='/trending' element={<Trending/>} />
+        
     </Routes>
     </Router>
 );

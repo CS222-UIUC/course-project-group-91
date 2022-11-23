@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./forum.css";
 import Post from "./post.js"
 import Button from '@mui/material/Button';
+import NewPost from './newPost.js';
 
 const Forum = () => {
   let data = [<div></div>]
@@ -26,14 +27,16 @@ const Forum = () => {
               FORUM
             </h1>
             <div>
-            {posts.map((post, index) =>{
+            {posts.map((post) =>{
                 return(
-                  <a href={"/forum/" + index}><Post post={post} path={"/forum/" + index}> </Post></a>
+                  <a href={"/forum/post"}><Post post={post} name={"For name"} 
+                  brand={"For Brand"} description={"For description"} 
+                  comment={["data", "lost"]} image={"url"}> </Post></a>
                 );
             })}
             
             </div>
-            <Button variant="contained" onClick={addPost}>+</Button>
+            <a href={"/forum/new"}><Button variant="contained" onClick={addPost}>+</Button></a>
             
             {/* include cards + create post button */}
           </div>
