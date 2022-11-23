@@ -1,6 +1,7 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-  
+
+// pulled from GeeksforGeeks https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/
 export const Nav = styled.nav`
   height: 85px;
   display: flex;

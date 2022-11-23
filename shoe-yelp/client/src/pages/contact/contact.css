@@ -1,3 +1,15 @@
 .body {
   text-align: center;
 }
+#subheader {
+  margin: 50px;
+}
+.contactForm {
+  margin: 50px;
+}
+#name {
+  margin: 10px;
+}
+#email {
+  margin: 10px;
+}

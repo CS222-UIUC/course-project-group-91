@@ -5,21 +5,44 @@ import { Nav, NavLink, NavMenu}
     from "./NavbarElements";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import {useEffect, useState} from 'react';
+
 const Navbar = () => {
+  //integration testing
+  // const [initialState, setInitialState] = useState([]);
+  // useEffect(()=> {
+  //     fetch('/api/').then(res => {
+  //         if (res.ok) {
+  //             return res.json()
+  //         }
+  //     }).then(jsonResponse => setInitialState(jsonResponse))
+  // },[])
+  // console.log(initialState);
+  // return(<div>Hey</div>);
   return (
     <>
     <div id = "header">
-      <a id = "home" href = "index.html">
-        <img src = {logo} alt = "shoe logo" id = "logo"/>
-      </a>
-      <TextField id="outlined-basic" label="Search" variant="outlined" />
-      <div id = "profile">
-        <Button variant="contained" href = "/login" >Log In</Button>
-        <Button variant="outlined" href = "/signup">Sign Up</Button>
+      <div id = "search">
+        <TextField id="outlined-basic" label="Search" variant="outlined" sx={{ width: '35ch'}}/>
+        </div>
+        <div className="profile" >
+          <div className="login">
+            <NavLink to="/login" activeStyle>
+              <Button variant="contained"> Log In </Button>
+            </NavLink>
+          </div>
+          <div className="signup">
+            <NavLink to="/signup" activeStyle>
+              <Button variant="outlined"> Sign Up </Button>
+            </NavLink>
+          </div>
+        </div>
+        <NavLink to="/home" activeStyle>
+          <img src = {logo} alt = "shoe logo" id = "logo"/>
+        </NavLink>
       </div>
-    </div>
-    <hr></hr>
-    <Nav className = "justify-content-center">
+      <hr></hr>
+      <Nav className = "justify-content-center">
         <NavMenu>
           <NavLink to="/about" activeStyle>
             ABOUT
@@ -36,7 +59,7 @@ const Navbar = () => {
         </NavMenu>
       </Nav>
       <hr></hr>
-      </>
+    </>
   );
 };
   

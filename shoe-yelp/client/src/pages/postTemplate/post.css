@@ -1,0 +1,28 @@
+.body {
+    text-align: center;
+}
+.post {
+    margin: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.postImage {
+    float: right;
+}
+#postImg {
+    height: 30%;
+    width: 400px;
+}
+.details {
+    margin-top: 100px;
+    margin-right: 200px;
+    display: inline-block;
+    height: 600px;
+    width: 800px;
+}
+.general {
+    display: inline-block;
+}
+.commentTitle {
+    float: left;
+}

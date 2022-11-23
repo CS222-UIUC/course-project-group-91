@@ -7,28 +7,28 @@ import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Forum from './pages/forum/forum';
-import Post from './pages/forum/post';
-import NewPost from './pages/forum/newPost'
-import Login from './pages/login/loginPage';
-import SignUp from './pages/signup/signUpPage';
+import ForumPost from './pages/forum/post';
+import NewForumPost from './pages/forum/newPost'
+import Login from './pages/login/login';
 import Trending from './pages/trending/trending';
-
-
+import Signup from './pages/signup/signup';
+import Post from './pages/postTemplate/post';
+  
 function App() {
 return (
     <Router>
-    <Navbar />
+    <Navbar/>
     <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/home' element={<Home />} />
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/forum' element={<Forum/>} />
-        <Route path='/forum/post' element={<Post/>} />
-        <Route path='/forum/new' element={<NewPost/>}/>
+        <Route path='/forum/post' element={<ForumPost/>} />
+        <Route path='/forum/new' element={<NewForumPost/>}/>
         <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<SignUp/>} />
+        <Route path='/signup' element={<Signup/>} />
         <Route path='/trending' element={<Trending/>} />
-        
+        <Route path='/post' element={<Post/>} />
     </Routes>
     </Router>
 );
