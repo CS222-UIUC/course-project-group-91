@@ -10,15 +10,16 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import NewPost from './newPost.js';
-import ForumPost from "../postTemplate/post";
+import {changePost} from "../postTemplate/post";
 
 // card element sourced from MaterialUI docs
 const Forum = () => {
   let navigate = useNavigate();
   let path = `/forum`; 
-  const click = (name, brand, description, src, comments) => {
+  const click = (showPost) => {
     // on click, switch page
     path = `/forum/post`; 
+    changePost(showPost);
     navigate(path);
   }
   //   <a href={"/forum/post"}><Post post={post} name={"For name"} 
@@ -33,7 +34,14 @@ const Forum = () => {
     src: img,
     comments: [],
   }
-  let data = [post]
+  const post2 = {
+    name: "NIKEsdsdsdsdsdds",
+    brand: "Air Force 1",
+    description: " Can never go wrong with a fresh pair of air forces. I would recommend purchasing the crease protector, true air force 1 heads know what I'm talking about.",
+    src: img,
+    comments: [],
+  }
+  let data = [post, post2]
   const [posts, setPosts] = useState(data)
   const addPost = event => {
     console.log(posts)
@@ -41,59 +49,64 @@ const Forum = () => {
     get_posts.push(post)
     setPosts(get_posts)
   };
-  return (
-    <>
-      <div className="body">
-        <div className="banner">
-          <section class="header">
-            <h1>FORUM</h1>
-          </section>
-        </div>
-          <div className="forum">
-            
-            
-            {/* include cards + create post button */}
-            <h3>
-              THIS WEEK
-            </h3>
-            {/* creating expanded cards https://www.tutorialspoint.com/how-to-create-expanding-cards-using-html-css-and-javascript */}
-            {/* should be pulled from database */}
-            {/* create card default file*/}
-            {posts.map((post) =>{
-              return(
-              <div className="card">
-                <Card sx={{ maxWidth: 345 }}>
-                  <CardActionArea onClick={click}>
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image = {img}
-                      alt="air force one"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {post.name}
-                      </Typography>
-                      <Typography gutterBottom variant="p" component="div">
-                        {post.brand}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                      {post.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-                
-          <ForumPost name={post.name} brand={post.brand} description={post.description} 
-            src={post.src} comments={post.comments}/>;
-              </div>);
-            })}
-            <Button variant="contained" onClick={addPost}>+</Button>
-            {/* <a href={"/forum/new"}><Button variant="contained" onClick={addPost}>+</Button></a> */}
+  if(window.location.pathname === "/forum") {
+    return (
+      <>
+        <div className="body">
+          <div className="banner">
+            <section class="header">
+              <h1>FORUM</h1>
+            </section>
           </div>
+            <div className="forum">
+              
+              
+              {/* include cards + create post button */}
+              <h3>
+                THIS WEEK
+              </h3>
+              {/* creating expanded cards https://www.tutorialspoint.com/how-to-create-expanding-cards-using-html-css-and-javascript */}
+              {/* should be pulled from database */}
+              {/* create card default file*/}
+              {posts.map((post) =>{
+                return(
+                <div className="card">
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea onClick={()=>click(post)}>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image = {img}
+                        alt="air force one"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          {post.name}
+                        </Typography>
+                        <Typography gutterBottom variant="p" component="div">
+                          {post.brand}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                        {post.description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                </div>)
+              })}
+              <Button variant="contained" onClick={addPost}>+</Button>
+              {/* <a href={"/forum/new"}><Button variant="contained" onClick={addPost}>+</Button></a> */}
+              
+            </div>
       </div>
-    </>
-  );
+      </>
+    );
+  } else if (window.location.pathname === "/forum/post") {
+    return (
+      <div>
+      </div>
+    );
+  }
 };
 
 export default Forum;
