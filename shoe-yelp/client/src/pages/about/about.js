@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css"
+import img from "./fay.jpeg";
 const About = () => {
   return (
     <>
@@ -21,6 +22,36 @@ const About = () => {
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </b>
           </p>
+        </div>
+        <div className="developers">
+          <div className="devCard">
+            {/* Dylan */}
+            <img src = {img} className = "profileImg"/>
+            <h3>DYLAN BRENNAN</h3>
+            <p className="role" >Backend Development</p>
+            <p>Computer Science + Anthropology</p>
+          </div>
+          <div className="devCard">
+            {/* Emmanuel */}
+            <img src = {img} className = "profileImg"/>
+            <h3>EMMANUEL BUABENG</h3>
+            <p className="role" >Frontend Development</p>
+            <p>Computer Science</p>
+          </div>
+          <div className="devCard">
+            {/* Fay */}
+            <img src = {img} className = "profileImg"/>
+            <h3>FAY LIN</h3>
+            <p className="role" >Frontend Development</p>
+            <p>Computer Science + Chemistry</p>
+            
+          </div>
+          <div className="devCard">
+            {/* Kyle */}
+            <img src = {img} className = "profileImg"/>
+            <h3>KYLE POLSON</h3>
+            <p className="role" >Backend Development</p>
+          </div>
         </div>
       </div>
     </div>

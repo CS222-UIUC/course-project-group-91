@@ -32,6 +32,7 @@ const Contact = () => {
           <h3>TELL US YOUR THOUGHTS</h3>
         </div>
       <div className="contactForm">
+        {/* on submit, add message to database */}
         <form onSubmit = {onSubmit}>
           <div id = "name">
             <TextField className = "outlined-basic" label="Name" variant="outlined" type = "text" name = "name" required/>

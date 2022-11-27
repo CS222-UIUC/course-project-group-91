@@ -7,6 +7,6 @@
 }
 .card {
   float: auto;
-  padding: 20px;
+  margin: 20px;
   display: inline-block;
 }
