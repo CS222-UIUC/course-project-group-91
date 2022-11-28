@@ -93,7 +93,7 @@ async function getFavoriteStyle(user, collection) {
 
     //Retrieves user data for a given query
     const doc = await collection.findOne(query);
-    val = doc.favorite-style;
+    val = doc.favorite_style; //changed - to _
     return val;
   } catch(err) {
     console.log(err);
@@ -120,7 +120,7 @@ async function getProfilePicture(user, collection) {
 
     //Retrieves user data for a given query
     const doc = await collection.findOne(query);
-    val = doc.profile-picture;
+    val = doc.profile_picture; //changed - to _
     return val;
   } catch(err) {
     console.log(err);

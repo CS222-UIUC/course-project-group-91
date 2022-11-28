@@ -5,20 +5,8 @@ import { Nav, NavLink, NavMenu}
     from "./NavbarElements";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import {useEffect, useState} from 'react';
 
 const Navbar = () => {
-  //integration testing
-  // const [initialState, setInitialState] = useState([]);
-  // useEffect(()=> {
-  //     fetch('/api/').then(res => {
-  //         if (res.ok) {
-  //             return res.json()
-  //         }
-  //     }).then(jsonResponse => setInitialState(jsonResponse))
-  // },[])
-  // console.log(initialState);
-  // return(<div>Hey</div>);
   return (
     <>
     <div id = "header">
