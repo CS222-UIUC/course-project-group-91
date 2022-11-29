@@ -4,3 +4,17 @@
 .about {
   margin: 70px;
 }
+.devCard {
+  display: inline-block;
+  margin: 70px;
+}
+.profileImg {
+  margin: 20px;
+  border-radius: 50%;    
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.role {
+  font-style: italic;
+}

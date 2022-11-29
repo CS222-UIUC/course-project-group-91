@@ -1,3 +1,5 @@
+// EXPORT TO THE DATABASE
+
 // import React, { useState } from 'react';
 // import "./forum.css"
 

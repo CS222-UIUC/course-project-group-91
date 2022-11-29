@@ -1,0 +1,18 @@
+.body {
+    text-align: center;
+  }
+  #subheader {
+    margin: 50px;
+  }
+  .postForm {
+    margin: 50px;
+  }
+  #name {
+    margin: 10px;
+  }
+  #brand {
+    margin: 10px;
+  }
+  #description {
+    margin: 10px;
+  }

@@ -8,6 +8,7 @@
 }
 .postImage {
     float: right;
+    display: inline-block;
 }
 #postImg {
     height: 30%;
@@ -18,11 +19,37 @@
     margin-right: 200px;
     display: inline-block;
     height: 600px;
-    width: 800px;
+    width: 600px;
 }
 .general {
     display: inline-block;
 }
+
 .commentTitle {
     float: left;
+}
+
+.commentCard {
+    margin:40px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 5px;
+    height: auto;
+    width: 90%;
+}
+
+.commentImg {
+    margin: 30px;
+    float: left;
+    display: inline-block;
+}
+#profileImg {
+    border-radius: 50%;    
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+}
+.commentText {
+    margin: 50px;
 }

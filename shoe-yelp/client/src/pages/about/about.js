@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css"
+import img from "./fay.jpeg";
 import { useState, useEffect } from 'react'
 const About = () => {
   const [data, setData] = useState({});
@@ -29,6 +30,36 @@ const About = () => {
               <div>{data.age}</div>
             </b>
           </p>
+        </div>
+        <div className="developers">
+          <div className="devCard">
+            {/* Dylan */}
+            <img src = {img} className = "profileImg"/>
+            <h3>DYLAN BRENNAN</h3>
+            <p className="role" >Backend Development</p>
+            <p>Computer Science + Anthropology</p>
+          </div>
+          <div className="devCard">
+            {/* Emmanuel */}
+            <img src = {img} className = "profileImg"/>
+            <h3>EMMANUEL BUABENG</h3>
+            <p className="role" >Frontend Development</p>
+            <p>Computer Science</p>
+          </div>
+          <div className="devCard">
+            {/* Fay */}
+            <img src = {img} className = "profileImg"/>
+            <h3>FAY LIN</h3>
+            <p className="role" >Frontend Development</p>
+            <p>Computer Science + Chemistry</p>
+          </div>
+          <div className="devCard">
+            {/* Kyle */}
+            <img src = {img} className = "profileImg"/>
+            <h3>KYLE POLSON</h3>
+            <p className="role" >Backend Development</p>
+            <p>Computer Science</p>
+          </div>
         </div>
       </div>
     </div>
