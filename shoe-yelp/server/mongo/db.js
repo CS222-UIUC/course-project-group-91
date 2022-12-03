@@ -5,10 +5,11 @@ const { MongoClient } = require('mongodb')
 // Connection string
 const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
+const database = client.db('shoe_yelp');
+const user_data = database.collection('user_data2');
+
 async function run() {
   try {
-    const database = client.db('shoe_yelp');
-    const user_data = database.collection('user_data2');
 
     const query = { name: 'James' };
     const user = await user_data.findOne(query);
@@ -26,20 +27,22 @@ async function run() {
     const james = await getName('jboat', user_data);
     console.log(james);
 
-    const favorite = await getFavoriteStyle('jboat', user_data);
-    console.log(favorite);
+    //const favorite = await getFavoriteStyle('jboat', user_data);
+    //console.log(favorite);
     const pass = await getPassword('jboat', user_data);
     console.log(pass);
-    const profile = await getProfilePicture('jboat', user_data);
-    console.log(profile);
+    //const profile = await getProfilePicture('jboat', user_data);
+    //console.log(profile);
 
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    closeConnection(client);
   }
 }
 
-
+async function closeConnection(client_) {
+  await client_.close();
+}
 
 /** 
  * Input username and user_data2 collection and outputs
@@ -52,6 +55,19 @@ async function getObjectID(user, collection) {
     const doc = await collection.findOne(query);
     id = doc._id;
     return id;
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+async function getUser(username_){
+  try {
+    const query = {username:username_};
+
+    //Retrieves user data for a given query
+    JSON: doc = await user_data.findOne(query);
+    
+    return JSON.parse(JSON.stringify(doc));
   } catch(err) {
     console.log(err);
   }
@@ -93,7 +109,7 @@ async function getFavoriteStyle(user, collection) {
 
     //Retrieves user data for a given query
     const doc = await collection.findOne(query);
-    val = doc.favorite_style; //changed - to _
+    val = doc.favorite-style;
     return val;
   } catch(err) {
     console.log(err);
@@ -120,18 +136,42 @@ async function getProfilePicture(user, collection) {
 
     //Retrieves user data for a given query
     const doc = await collection.findOne(query);
-    val = doc.profile_picture; //changed - to _
+    val = doc.profile-picture;
     return val;
   } catch(err) {
     console.log(err);
   }
 }
 
-run().catch(console.dir);
+//run().catch(console.dir);
 
-module.exports.getObjectID = getObjectID;
-module.exports.isValidUsername = isValidUsername;
-module.exports.getName = getName;
-module.exports.getFavoriteStyle = getFavoriteStyle;
-module.exports.getPassword = getPassword;
-module.exports.getProfilePicture = getProfilePicture;
+async function login(user, pass) {
+  try {
+    const query = {username:user};
+
+    //Retrieves user data for a given query
+    const doc = await user_data.findOne(query);
+    
+    if (doc == null){
+      return null;
+    }
+    val = doc.password;
+    if(val==pass){
+      return user;
+    }
+    return null;
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+
+module.exports = {
+  isValidUsername: isValidUsername,
+  getPassword: getPassword,
+  closeConnection: closeConnection,
+  user_profile_collection: user_data,
+  mongo_client: client,
+  login: login,
+  getUser: getUser,
+};
