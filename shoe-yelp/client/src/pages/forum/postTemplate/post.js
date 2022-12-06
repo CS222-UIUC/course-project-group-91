@@ -4,6 +4,10 @@ import profileImg from "./profile.jpeg"
 import img from "./airforce1.png"
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import FormControl from '@mui/material/FormControl';
+import OutlinedInput from '@mui/material/OutlinedInput';
+
+
 let post = {
   name: "NIKE",
   brand: "Air Force 1",
@@ -20,7 +24,7 @@ export function changePost(newPost) {
   post.comments = newPost.comments;
 }
 // card element sourced from MaterialUI docs
-const Post = () => {
+const ForumPost = () => {
   console.log(post.name)
   let navigate = useNavigate();
   let path = '/forum';
@@ -56,12 +60,23 @@ const Post = () => {
             </div>
             {/* post comment section */}
               <div className='commentSection'>
-                <div className='commentTitle'> 
+              <div className='commentTitle'> 
                   <h3>
                     {"Comments"}
                   </h3>
                 </div>
                 <br></br>
+                {/* add a comment */}
+                <div className='addComment'>
+                <br></br>
+                <div id = "message">
+                  <FormControl sx={{ width: '50ch'}}>
+                    <OutlinedInput placeholder="Message" type = "text" name = "message" required />
+                  </FormControl> 
+                </div>
+                <br></br>
+                <Button variant="contained" onClick={back}> {"Add Comment"}</Button>
+                </div>
                 {/* comment template */}
                 <div className='commentCard'>
                   <div className='commentImg'>
@@ -69,15 +84,15 @@ const Post = () => {
                     <p><b>@user.name</b></p>
                   </div>
                   <div className='commentText'>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> I love these shoes!! They're my go to for daily use. They work for so many different situations, from going out with friends to walking in the park, I find myself always reaching for these</p>
                   </div>
                 </div>
               </div>
           </div>
-          <br></br>
           <Button variant="contained" onClick={back}> {"GO BACK"}</Button>
+          <br></br>
       </div>
     </>
   );
 };
-export default Post;
+export default ForumPost;

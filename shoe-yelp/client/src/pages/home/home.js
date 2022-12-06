@@ -14,10 +14,7 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We are for the adventurers, the ones who dare to go beyond the norm for their style. We take what's popular further. These shoes are at the top of their class, breaking records left and right. You won't regret sourcing the newest styles at ShoeAnnex.
             </b>
           </p>
         </div>
@@ -28,10 +25,7 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              This community is for anyone looking for their ideal shoe. In a sea of options, how do you find the perfect fit? Using the information gathered through our forums and communities, you can discover a whole new world of opinions and styles to make sure you find the real reviews before making the big purchase. We want to help you find that dream style here at ShoeAnnex.
             </b>
           </p>
         </div>
@@ -42,10 +36,7 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We want our users to find their community, a group of fellow shoe lovers who talk about their faves and hates. This is the place for all shoe conversations, ratings and latest hits. We all come together with one goal: to amplify your shoe style. 
             </b>
           </p>
         </div>

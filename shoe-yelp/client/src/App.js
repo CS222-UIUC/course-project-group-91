@@ -11,7 +11,7 @@ import NewPost from './pages/forum/newPost'
 import Login from './pages/login/login';
 import Trending from './pages/trending/trending';
 import Signup from './pages/signup/signup';
-import ForumPost from './pages/postTemplate/post';
+import ForumPost from './pages/forum/postTemplate/post';
   
 function App() {
 return (
@@ -23,7 +23,7 @@ return (
         <Route path='/contact' element={<Contact/>} />
         <Route path='/forum' element={<Forum/>} />
         <Route path='/forum/newPost' element={<NewPost/>}/>
-        <Route path='/forum/post' element={<ForumPost/>}/>
+        <Route path='/forum/postTemplate/post' element={<ForumPost/>}/>
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/trending' element={<Trending/>} />
