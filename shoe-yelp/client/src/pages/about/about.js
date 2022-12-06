@@ -1,6 +1,9 @@
 import React from "react";
 import "./about.css"
-import img from "./fay.jpeg";
+import dylan from "./dylan.jpg";
+import emmanuel from "./emmanuel.jpg";
+import fay from "./fay.jpeg";
+import kyle from "./kyle.jpg";
 import { useState, useEffect } from 'react'
 const About = () => {
   const [data, setData] = useState({});
@@ -21,11 +24,7 @@ const About = () => {
           <br></br>
           <p>
             <b>
-              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */}
-              {/*  */}
+              When we started out, we weren't sure what project to take on. We had laid out multiple ideas but to no avail. One of our members brought up a way to find out the best shoes and write about your favorites. That led us to create ShoeAnnex. Combining love for shoes and computer science, we found ourselves creating ShoeAnnex. We hope you find what shoe you're looking for.
               <div>{data.name}</div>
               <div>{data.age}</div>
             </b>
@@ -34,28 +33,28 @@ const About = () => {
         <div className="developers">
           <div className="devCard">
             {/* Dylan */}
-            <img src = {img} className = "profileImg"/>
+            <img src = {dylan} className = "profileImg"/>
             <h3>DYLAN BRENNAN</h3>
             <p className="role" >Backend Development</p>
             <p>Computer Science + Anthropology</p>
           </div>
           <div className="devCard">
             {/* Emmanuel */}
-            <img src = {img} className = "profileImg"/>
+            <img src = {emmanuel} className = "profileImg"/>
             <h3>EMMANUEL BUABENG</h3>
             <p className="role" >Frontend Development</p>
             <p>Computer Science</p>
           </div>
           <div className="devCard">
             {/* Fay */}
-            <img src = {img} className = "profileImg"/>
+            <img src = {fay} className = "profileImg"/>
             <h3>FAY LIN</h3>
             <p className="role" >Frontend Development</p>
             <p>Computer Science + Chemistry</p>
           </div>
           <div className="devCard">
             {/* Kyle */}
-            <img src = {img} className = "profileImg"/>
+            <img src = {kyle} className = "profileImg"/>
             <h3>KYLE POLSON</h3>
             <p className="role" >Backend Development</p>
             <p>Computer Science</p>
