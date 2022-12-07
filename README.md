@@ -14,7 +14,7 @@ First, in the project's /shoe-yelp/server/ directory, you can run:
 ### `npm run devStart`
 
 In order to run the server.
-The page will reload automatically when you make changes.\
+The page will reload automatically when you make changes.
 
 In the project's /shoe-yelp/client/src/ directory, you can run:
 ### `npm start`
