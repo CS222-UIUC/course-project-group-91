@@ -3,7 +3,7 @@
 const { MongoClient } = require('mongodb')
 
 // Connection string
-const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Dylan:MongoDB123@cluster0.0fwkwj3.mongodb.net/test"
 const client = new MongoClient(uri);
 const database = client.db('shoe_yelp');
 const user_data = database.collection('user_data2');
@@ -165,6 +165,20 @@ async function login(user, pass) {
   }
 }
 
+const comment_data = database.collection('comment_data');
+async function getComment(postid){
+  try {
+    const query = {postid:postid};
+
+    //Retrieves user data for a given query
+    JSON: doc = await comment_data.findOne(query);
+
+    return JSON.parse(JSON.stringify(doc));
+  } catch(err) {
+    console.log(err);
+  }
+}
+
 
 module.exports = {
   isValidUsername: isValidUsername,
@@ -174,4 +188,6 @@ module.exports = {
   mongo_client: client,
   login: login,
   getUser: getUser,
+  getName: getName,
+  getComment: getComment,
 };

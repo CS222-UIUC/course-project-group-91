@@ -14,10 +14,8 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Find your newest pair of kicks in the Trending Tab and chase the hottest trends from around the world. Whether it's Nike or Adidas,
+            sneaker or boat shoe - you'll find what's in style and in stock.
             </b>
           </p>
         </div>
@@ -28,10 +26,9 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Not sure if the shoe you're thinking of buying is right for you? Shoe Annex is the perfect place to go for honest opinions and reviews.
+            As a third-party site, you don't have to worry about fake reviews or ratings - everything comes from right within the community. Find
+            out the inside scoop on your favorite brands and more.
             </b>
           </p>
         </div>
@@ -42,10 +39,9 @@ const Home = () => {
           <br></br>
           <p>
             <b>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Shoe Annex is a place for discussion and deliberation - search through the Forum Page to find shoes you'd like to discuss
+            and possibly add to your own collection. Have an interest in a niche brand that others might share? Find your crowd and build
+            your own communities within the forum by liking each others' posts.
             </b>
           </p>
         </div>

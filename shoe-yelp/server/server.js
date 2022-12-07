@@ -16,4 +16,7 @@ app.use('/users', userRouter);
 const aboutRouter = require('./routes/about');
 app.use('/about', aboutRouter);
 
+const forumRouter = require('./routes/forum');
+app.use('/forum', forumRouter);
+
 app.listen(4000, () => console.log("Server is running."));

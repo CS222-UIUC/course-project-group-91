@@ -6,6 +6,7 @@ const client = new MongoClient(uri);
 const express = require('express');
 const router = express.Router();
 var newList = require('../server.js');
+const database = require('../mongo/db');
 
 router.route("/forum").post((req, res) => {
   // post request
@@ -54,3 +55,15 @@ router.route("/forum").post((req, res) => {
         }
       });
     });
+
+router
+    .route('/post')
+    .get((req, res) => {
+      const userPromise = Promise.resolve(database.getComment('111'));
+      userPromise.then((value) => {
+          res.json(value)
+      });
+    });
+
+
+module.exports = router;
