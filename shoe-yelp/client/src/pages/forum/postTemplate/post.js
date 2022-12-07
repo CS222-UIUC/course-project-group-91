@@ -22,7 +22,7 @@ export function changePost(newPost) {
 }
 
 // card element sourced from MaterialUI docs
-const Post = () => {
+const ForumPost = () => {
   console.log(post.name)
   let navigate = useNavigate();
   let path = '/forum';
@@ -63,12 +63,23 @@ const Post = () => {
             </div>
             {/* post comment section */}
               <div className='commentSection'>
-                <div className='commentTitle'> 
+              <div className='commentTitle'> 
                   <h3>
                     {"Comments"}
                   </h3>
                 </div>
                 <br></br>
+                {/* add a comment */}
+                <div className='addComment'>
+                <br></br>
+                <div id = "message">
+                  <FormControl sx={{ width: '50ch'}}>
+                    <OutlinedInput placeholder="Message" type = "text" name = "message" required />
+                  </FormControl> 
+                </div>
+                <br></br>
+                <Button variant="contained" onClick={back}> {"Add Comment"}</Button>
+                </div>
                 {/* comment template */}
                 <div className='commentCard'>
                   <div className='commentImg'>
@@ -81,10 +92,10 @@ const Post = () => {
                 </div>
               </div>
           </div>
-          <br></br>
           <Button variant="contained" onClick={back}> {"GO BACK"}</Button>
+          <br></br>
       </div>
     </>
   );
 };
-export default Post;
+export default ForumPost;

@@ -10,16 +10,14 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import {changePost} from "../postTemplate/post";
 //import axios from 'axios';
-
 // ALL POSTS SHOWN ON SCREEN WILL BE 
-
 // card element sourced from MaterialUI docs
 const Forum = () => {
   let navigate = useNavigate();
   let path = `/forum`; 
   const click = (showPost) => {
     // on click, switch page
-    path = `/forum/post`; 
+    path = `/forum/postTemplate/post`; 
     changePost(showPost);
     navigate(path);
   }
@@ -92,9 +90,7 @@ const Forum = () => {
                 </div>)
               })}
               <br></br>
-              <Button variant="contained" onClick={addPost}>+</Button> 
-              {/* <a href={"/forum/new"}><Button variant="contained" onClick={addPost}>+</Button></a> */}
-              
+              <Button variant="contained" onClick={addPost}>+</Button>               
             </div>
       </div>
       </>
