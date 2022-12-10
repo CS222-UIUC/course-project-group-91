@@ -50,7 +50,7 @@ Emmanuel Buabeng
 - Created button for post creation 
 
 Fay Lin 
-- wWorked on the styling for the whole project using CSS
+- Worked on the styling for the whole project using CSS
 - Created the central frontend architecture of the website using React.js 
 
 Kyle Polson
