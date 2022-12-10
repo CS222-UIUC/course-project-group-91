@@ -8,23 +8,18 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-import {changePost} from "./postTemplate/post";
-//import axios from 'axios';
-// ALL POSTS SHOWN ON SCREEN WILL BE 
+import {changePost} from "./post";
+
 // card element sourced from MaterialUI docs
 const Forum = () => {
   let navigate = useNavigate();
   let path = `/forum`; 
   const click = (showPost) => {
     // on click, switch page
-    path = `/forum/postTemplate/post`; 
+    path = `/forum/post`; 
     changePost(showPost);
     navigate(path);
   }
-  //   <a href={"/forum/post"}><Post post={post} name={"For name"} 
-                //   brand={"For Brand"} description={"For description"} 
-                //   comment={["data", "lost"]} image={"url"}> </Post></a>
-  
 // template post
   const post = {
     name: "NIKE",
@@ -39,12 +34,7 @@ const Forum = () => {
 
   // on button click, go to new post page and create a new post to be uploaded to database
   const addPost = event => {
-    // console.log(posts)
-    // let get_posts = posts.slice() // apparently we need to use .slice() to update posts
-    // get_posts.push(post)
-    // setPosts(get_posts)
     navigate('/forum/newPost');
-
   };
   if(window.location.pathname === "/forum") {
     return (
