@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-import {changePost} from "../postTemplate/post";
+import {changePost} from "./postTemplate/post";
 //import axios from 'axios';
 // ALL POSTS SHOWN ON SCREEN WILL BE 
 // card element sourced from MaterialUI docs
