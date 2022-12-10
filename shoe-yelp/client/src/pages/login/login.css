@@ -1,0 +1,15 @@
+.body {
+  text-align: center;
+}
+.username {
+  margin: 30px;
+}
+.password {
+  margin: 30px;
+}
+.signupButton {
+  margin: 10px;
+}
+.accButton {
+  margin: 10px;
+}
