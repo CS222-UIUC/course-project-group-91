@@ -4,7 +4,10 @@ import profileImg from "./profile.jpeg"
 import img from "./airforce1.png"
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import FormControl from '@mui/material/FormControl';
+import OutlinedInput from '@mui/material/OutlinedInput';
+
 let post = {
   name: "NIKE",
   brand: "Air Force 1",
@@ -92,8 +95,8 @@ const ForumPost = () => {
                 </div>
               </div>
           </div>
-          <Button variant="contained" onClick={back}> {"GO BACK"}</Button>
           <br></br>
+          <Button variant="contained" onClick={back}> {"GO BACK"}</Button>
       </div>
     </>
   );

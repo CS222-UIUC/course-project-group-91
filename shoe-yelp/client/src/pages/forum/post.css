@@ -52,4 +52,6 @@
 }
 .commentText {
     margin: 50px;
+    height: 100px;
+    width: 600px;
 }
